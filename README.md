@@ -1,9 +1,11 @@
-# A starter webpack project for React
+# You-Wish-This-Was-Fake-News
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider this approach:
-
-* Fork this repo
-* Rename your repo according to the app you're building
+The idea -
+- Create a webpage that shows recent Donald Trump News.
+- To do this I will have to take information snippets from other websites and repost/link them on mine.
+- To start I am aiming to have only one page that is auto refreshing with new updated Trump news.
+- It will be laid out similar to the imgur homepage but with all the posts being seemlessly connected together with a slightly different format on each line.
+- I will either incorperate his twitter posts within the collage or I will create a side panel with a stream of his twitter posts.
 
 ```sh
 git clone https://github.com/dev-academy-challenges/[your-app].git
