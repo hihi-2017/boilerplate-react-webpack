@@ -1,5 +1,7 @@
 import React from 'react'
 
+// import index from '../../server/routes/index'
+
 export default class RenderTweet extends React.Component {
 
   constructor(props) {
@@ -9,6 +11,7 @@ export default class RenderTweet extends React.Component {
   render() {
     return (
       <div className="tweet">
+        <h1>Understandable, have a nice day</h1>
         <h1>{tweet.name}</h1>
         <h1>{tweet.text}</h1>
         <h1>{tweet.createdAt}</h1>

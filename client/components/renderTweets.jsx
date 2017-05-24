@@ -1,20 +1,18 @@
 import React from 'react'
+import RenderTweet from './RenderTweet'
 
+import * as api from '../api'
 
 export default class RenderTweets extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      tweets: []
+      tweets: [{}, {},{}]
     }
   }
 
-  setTweets(tweets) {
-    this.setState({tweets})
-  }
-
   ComponentDidMount() {
-    // api.searchTwitter(this.setTweets.bind(this))
+    api.getTweets((response) => console.log(response))
   }
 
 
@@ -23,6 +21,8 @@ export default class RenderTweets extends React.Component {
   }
 
   render() {
-    return this.state.tweets.map(renderTweet)
+    return <div>
+      {this.state.tweets.map((tweet) => this.renderTweet(tweet))}
+    </div>
   }
 }
