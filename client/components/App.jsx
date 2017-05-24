@@ -1,10 +1,12 @@
 import React from 'react'
+import RenderTweets from './renderTweets'
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <div>
+      Hello
+    </div>
   )
 }
 
 export default App
-
