@@ -7,12 +7,14 @@ export default class RenderTweets extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      tweets: [{}, {},{}]
+      tweets: []
     }
   }
 
-  ComponentDidMount() {
-    api.getTweets((response) => console.log(response))
+  componentDidMount() {
+    api.getTweets((response) =>
+      this.setState({tweets: response})
+    )
   }
 
 
