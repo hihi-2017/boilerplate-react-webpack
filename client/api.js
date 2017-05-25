@@ -8,6 +8,15 @@ function getTweets(callback) {
     })
 }
 
+function getTrump(callback) {
+  request
+    .get('/api/v1/trump')
+    .end(function(err, res) {
+      callback(res.body)
+    })
+}
+
 module.exports = {
-  getTweets
+  getTweets,
+  getTrump
 }

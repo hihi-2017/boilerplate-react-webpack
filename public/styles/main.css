@@ -1,0 +1,29 @@
+body {
+    background: url(Trump1.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: arial;
+}
+
+h1 {
+  color: black;
+  font-size: 17px;
+}
+
+#app {
+  background: rgba(256, 256, 256, 0.3);
+}
+
+.container {
+  display: flex;
+}
+
+.NormalTweets {
+
+}
+
+.DonaldTweets{
+
+}

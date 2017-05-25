@@ -1,11 +1,17 @@
 import React from 'react'
 import RenderTweets from './renderTweets'
+import RenderTrumpTweets from './RenderTrumpTweets'
 
 const App = () => {
   return (
-    <div>
-      <RenderTweets/>
-    </div>
+    <div className= 'container'>
+      <div className= 'NormalTweets'>
+        <RenderTweets/>
+      </div>
+      <div className= 'DonaldTweets'>
+        <RenderTrumpTweets/>
+      </div>
+  </div>
   )
 }
 

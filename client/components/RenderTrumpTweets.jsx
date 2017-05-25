@@ -7,13 +7,13 @@ export default class RenderTweets extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      tweets: [],
+      trump: [],
     }
   }
 
   componentDidMount() {
-    api.getTweets((response) =>
-      this.setState({tweets: response})
+    api.getTrump((response) =>
+      this.setState({trump: response})
     )
   }
 
@@ -24,7 +24,7 @@ export default class RenderTweets extends React.Component {
 
   render() {
     return <div>
-      {this.state.tweets.map((tweet) => this.renderTweet(tweet))}
+      {this.state.trump.map((tweet) => this.renderTweet(tweet))}
     </div>
   }
 }

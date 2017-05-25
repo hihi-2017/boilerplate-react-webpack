@@ -10,20 +10,36 @@ var client = new Twitter({
   access_token_secret:'mFIcSfMfWJRtHJE6ubVvmQGnwknhq8uXqFaFQfC11K0NG'
 })
 
-
 router.get('/tweets', (req, res) => {
-  client.get('search/tweets', {q:'trump', count: "20"}, function(error, tweets, response) {
+  client.get('search/tweets', {q:'realDonaldTrump', count: "5", truncated: true}, function(error, tweets, response) {
     let sortedTweets = tweets.statuses.map(tweet => {
       return {
         name: tweet.user.screen_name,
         text: tweet.text,
         createdAt: tweet.created_at,
-        profileImageUrl: tweet.profile_image_url
+        profileImageUrl: tweet.user.profile_image_url_https
       }
     })
     res.json(sortedTweets)
   })
 })
+
+router.get('/trump', (req, res) => {
+  client.get('statuses/user_timeline', {user_id:'25073877', screen_name:'realDonaldTrump', count: '5', }, function(error, tweets, response) {
+    let TrumpTweets = tweets.map(tweet => {
+      return {
+        name: tweet.user.screen_name,
+        text: tweet.text,
+        createdAt: tweet.created_at,
+        profileImageUrl: tweet.user.profile_image_url_https
+      }
+    })
+    res.json(TrumpTweets)
+  })
+})
+
+
+
 
 
 module.exports = router
