@@ -5,11 +5,11 @@ import RenderTrumpTweets from './RenderTrumpTweets'
 const App = () => {
   return (
     <div className= 'container'>
-      <div className= 'NormalTweets'>
-        <RenderTweets/>
-      </div>
       <div className= 'DonaldTweets'>
         <RenderTrumpTweets/>
+      </div>
+      <div className= 'NormalTweets'>
+        <RenderTweets/>
       </div>
   </div>
   )

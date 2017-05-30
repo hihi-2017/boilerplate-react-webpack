@@ -23,7 +23,7 @@ export default class RenderTweets extends React.Component {
   }
 
   render() {
-    return <div>
+    return <div className="RenderedTrump">
       {this.state.trump.map((tweet) => this.renderTweet(tweet))}
     </div>
   }

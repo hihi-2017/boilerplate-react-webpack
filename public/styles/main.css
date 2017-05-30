@@ -12,18 +12,33 @@ h1 {
   font-size: 17px;
 }
 
-#app {
+.tweet {
+  flex-direction: row;
+  border-style: solid;
+   border-color: black;
+   width: 20%;
+}
+
+.RenderedTrump {
+  display: flex;
+  background: rgba(256, 256, 256, 0.3);
+  height: 300px;
+}
+
+.DonaldTweets {
+  height: 300px;
+}
+
+.RenderedTweet {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
   background: rgba(256, 256, 256, 0.3);
 }
 
 .container {
   display: flex;
-}
-
-.NormalTweets {
-
-}
-
-.DonaldTweets{
-
+  flex-direction: column;
+  width: 100%;
 }
